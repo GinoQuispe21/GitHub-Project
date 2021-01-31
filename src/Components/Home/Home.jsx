@@ -1,17 +1,18 @@
 import React from 'react';
 import axios from 'axios';
+import UserInfo from '../UserInfo/UserInfo.jsx';
 import URL from '../../baseURL';    
 
 const Home = () => {
 
+    const [infoH, setInfo] = React.useState();
     const [username, setUsername] = React.useState();
-    const [info, setInfo] = React.useState();
+
 
     const GetUserInfo = () =>{
-        axios.get(`${URL}users/${username}/followers`)
+        axios.get(`${URL}users/${username}`)
         .then(res => {
             setInfo(res.data);
-            console.log(info);
         })
     }
 
@@ -22,12 +23,8 @@ const Home = () => {
     return (
         <div>
             <input value={username} onChange={onchange}></input>
-            <h2>{username}</h2>
-            <h2>{info?.login}</h2>
-            <button onClick={GetUserInfo}>soy un bonito boton</button>
-            <div>
-                <p>{JSON.stringify(info)}</p>
-            </div>
+            <button onClick={GetUserInfo}>Busca tu pelada</button>
+            <UserInfo info={infoH} />
         </div>
     )
 }
