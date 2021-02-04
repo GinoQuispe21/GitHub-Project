@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import URL from '../../baseURL';
 import styles from './home.module.css';
-import UserInfo from '../UserInfo/UserInfo.jsx';
+import si from '../../Assets/si.png';
 
 const Home = () => {
 
@@ -28,7 +28,7 @@ const Home = () => {
                         <h1 className={styles.title}>Search Username</h1>
                     </div>
                     <div className={styles.imageContainer}>
-                        <UserInfo info={infoH} />
+                        <img src={si} alt="404 gg u suck" />
                     </div>
                 </div>
                 <div className={styles.inputContainer}>
