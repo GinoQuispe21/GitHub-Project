@@ -1,19 +1,24 @@
 import React from 'react';
-import axios from 'axios';
-import URL from '../../baseURL';
+//import axios from 'axios';
+//import URL from '../../baseURL';
 import styles from './home.module.css';
 import si from '../../Assets/si.png';
+import {useHistory} from "react-router-dom";
 
 const Home = () => {
 
-    const [infoH, setInfo] = React.useState();
     const [username, setUsername] = React.useState();
 
+    let history = useHistory();
+
     const GetUserInfo = () => {
-        axios.get(`${URL}users/${username}`)
+        history.push(`/users/${username}`)
+        
+        
+        /*axios.get(`${URL}users/${username}`)
         .then(res => {
             setInfo(res.data);
-        });
+        });*/
     }
 
     const onchange = (event) => {
