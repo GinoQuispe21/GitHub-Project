@@ -1,0 +1,162 @@
+/* Layout */
+* {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 100;
+    min-width: 310px;
+}
+
+.titleRow {
+    display: flex;
+    height: 25%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.infoRow {
+    display: flex;
+    height: 75%;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.infoCol {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.infoContainer {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.imgCol {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profileImg {
+    border-radius: 10px;
+    width: 50%;
+    min-width: 310px;
+    transition: all .2s ease-in-out;
+}
+
+.profileImg:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.langButton {
+    border-radius: 30px;
+    width: 15vw;
+    min-width: 160px;
+    min-height: 50px;
+    background: #80E8FF;
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 1rem 0;
+    border: none;
+    transition: all .2s ease-in-out;
+}
+
+.langButton:hover {
+    background: #4bb2c9;
+    cursor: pointer;
+}
+
+/* Typography */
+p {
+    font-size: 1.3rem;
+}
+
+.title {
+    font-size: 4rem;
+    text-decoration: none;
+    color:  #7971EA;
+    font-weight: 700;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+
+.title:hover {
+    color:  #353085;
+}
+
+.bio {
+    text-align: justify;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 800px){
+    .container {
+        height: 100%;
+    }
+    .titleRow {
+        height: 15%;
+        flex-direction: column;
+    }
+    .infoRow {
+        height: 85%;
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .infoCol {
+        height: 60%;
+        width: 100%;
+    }
+    .infoContainer {
+        align-items: center;
+    }
+    .imgCol {
+        height: 40%;
+        width: 100%;
+    }
+    .profileImg {
+        border-radius: 80px;
+        width: 30%;
+        box-sizing: border-box;
+        padding: 3rem;
+        min-width: 250px;
+    }
+    .title {
+        font-size: 2.8rem;
+    }
+    .bio {
+        text-align: center;
+    }
+    .name {
+        font-size: 2rem;
+        text-align: center;
+    }
+    p {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+}
