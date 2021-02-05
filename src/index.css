@@ -9,7 +9,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7971EA;
+  border-radius: 10px;
+  width: 5px;
+}
+
 #root {
   height: 100%;
 }
-
