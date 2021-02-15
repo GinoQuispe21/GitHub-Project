@@ -1,0 +1,83 @@
+/* Layout */
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+.reposContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleRow {
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.reposRow {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
+}
+
+.listItem {
+    width: 80%;
+    min-width: 300px;
+    min-height: 150px;
+    display: flex;
+    list-style: none;
+    border-radius: 5px;
+    border: 1px solid #30363D;
+    margin: 2rem;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: .7rem 1.2rem;
+    transition: all .2s ease-in-out;
+}
+
+.listItem:hover {
+    background: #A3E7FF;
+}
+
+@media only screen and (min-width: 800px){
+    .listItem {
+        width: 40%;
+    }
+}
+
+/* Typo */
+
+.title {
+    font-size: 4rem;
+    color: #A3E7FF;
+    font-weight: 700;
+}
+
+.repoTitle {
+    font-size: 1.3rem;
+    color: #A3E7FF;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+}
+
+.repoDesc, .repoLang {
+    font-size: .8rem;
+    color: #636B73;
+}
+
+.listItem:hover .repoTitle  {
+    color: #0D1017;
+}
