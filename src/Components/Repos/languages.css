@@ -1,0 +1,144 @@
+.JavaScript {
+    background: #eae871;
+    color: #504f14;
+}
+
+.Vue {
+    background: #42b883;
+    color: #113b28;
+}
+
+.Java {
+    background: #e2964f;
+    color: #55300d;
+}
+
+.TypeScript {
+    background: #388eff;
+    color: #0a274e;
+}
+
+.Python {
+    background: #427eff;
+    color: #00134b;
+}
+
+.Go {
+    background: #9bdfff;
+    color: #105575;
+}
+
+.HTML {
+    background: #fdbb64;
+    color: #69400b;
+}
+
+.C\2B\2B {
+    background: #ff92ff;
+    color: #7e0c7e;
+}
+
+.C\23 {
+    background: #579255;
+    color: #012900;
+}
+
+.CSS {
+    background: #9657d1;
+    color: #400b5f;
+}
+
+.Jupyter {
+    background: #e4c254;
+    color: #412504;
+}
+
+.Vim, .VimL {
+    background: #60b358;
+    color: rgb(6, 49, 0);
+}
+
+.TeX {
+    background: #e2e2e2;
+    color: #202020;
+}
+
+.Swift {
+    background: #ff6943;
+    color: #3d0c00;
+}
+
+.Kotlin {
+    background: #67a9ff;
+    color: #003172;
+}
+
+.Dart {
+    background: #2a3868;
+    color: #a7bbff;
+}
+
+.Gherkin {
+    background: #4f2a68;
+    color: #e2c4f7;
+}
+
+.Objective-C {
+    background: #2a4f68;
+    color: #c8e9ff;
+}
+
+.Rebol, .C, .PureBasic, .Makefile, .Visual, .D, .Lisp {
+    background: #424242;
+    color: #dddddd;
+}
+
+.R {
+    background: #3f3fff;
+    color: #00004b;
+}
+
+.PowerShell, .Shell {
+    background: #020202;
+    color: #f5f5f5;
+}
+
+.Cuda {
+    background: #1a1918;
+    color: #7ab547;
+}
+
+.Lua {
+    background: #7081ca;
+    color: #001263;
+}
+
+.PHP {
+    background: #7081ca;
+    color: #000311;
+}
+
+.Ruby {
+    background: #ca6666;
+    color: #580000;
+}
+
+.CoffeeScript {
+    background: #8f7051;
+    color: #3f1f00;
+}
+
+.Rust {
+    background: #bd8c7d;
+    color: #2e0b00;
+}
+
+.Dockerfile {
+    background: #0db7ed;
+    color: #0f3642;
+}
+
+.null, .AutoHotkey {
+    background: #24292d;
+    color: #fff;
+}

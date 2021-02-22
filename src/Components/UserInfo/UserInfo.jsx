@@ -1,15 +1,16 @@
-import React, {useEffect} from 'react'
-import {useParams} from "react-router-dom";
+import React, { useEffect, useState} from 'react'
+import { useParams, useHistory } from "react-router-dom";
 import axios from 'axios';
 import URL from '../../baseURL';
 import styles from './userInfo.module.css';
 
 const UserInfo = () => {
 
-    const [infoH, setInfo] = React.useState();
-    const [avatarUrl] = React.useState('https://avatars.githubusercontent.com/');
+    const [infoH, setInfo] = useState();
+    const [avatarUrl] = useState('https://avatars.githubusercontent.com/');
+    
     let { username } = useParams();
-
+    let history = useHistory();
     
     useEffect(() => {
         axios.get(`${URL}users/${username}`)
@@ -28,9 +29,9 @@ const UserInfo = () => {
                     <div className={styles.infoContainer}>
                         <h3 className={styles.name}>{infoH?.name}</h3>
                         <p className={styles.bio}>{infoH?.bio}</p>
-                        <p> Followers: {infoH?.followers}</p>
-                        <p> Following: {infoH?.following}</p>
-                        <button className={styles.langButton}>Languages</button>
+                        <p className={styles.followLink} onClick={() => {history.push(`/users/${username}/followers`)}}> Followers: {infoH?.followers}</p>
+                        <p className={styles.followLink} onClick={() => {history.push(`/users/${username}/following`)}}> Following: {infoH?.following}</p>
+                        <button className={styles.langButton} onClick={() => {history.push(`/users/${username}/repos`)}}>Repos</button>
                     </div>
                 </div>
                 <div className={styles.imgCol}>
