@@ -1,22 +1,15 @@
 import Home from './Components/Home/Home';
-import UserInfo from './Components/UserInfo/UserInfo.jsx';
+import UserInfo from './Components/UserInfo/UserInfo';
 import Language from './Components/Languages/Languages';
 import Following from './Components/Following/Following';
 import Followers from './Components/Followers/Followers';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
- 
-} from "react-router-dom";
+import Repos from './Components/Repos/Repos';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Router>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
+    <Router>
+      <Switch>
         <Route exact path="/users/:username/language">
           <Language />
         </Route>
@@ -26,16 +19,17 @@ function App() {
         <Route exact path="/users/:username/followers">
           <Followers />
         </Route>
+        <Route exact path="/users/:username/repos">
+          <Repos/>
+        </Route>
         <Route path="/users/:username">
           <UserInfo />
         </Route>
         <Route path="/">
           <Home />
         </Route>
-        </Switch>
-
-      </Router>
-    </>
+      </Switch>
+    </Router>
   );
 }
 
