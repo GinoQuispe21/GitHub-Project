@@ -114,6 +114,17 @@ p {
     font-weight: 600;
 }
 
+.followLink {
+    width: fit-content;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+}
+
+.followLink:hover {
+    color:  #7971EA;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 800px){
     .container {
         height: 100%;
@@ -123,19 +134,20 @@ p {
         flex-direction: column;
     }
     .infoRow {
-        height: 85%;
+        height: 90%;
         flex-direction: column;
         flex-direction: column-reverse;
     }
     .infoCol {
-        height: 60%;
+        height: 70%;
         width: 100%;
     }
     .infoContainer {
+        height: 95%;
         align-items: center;
     }
     .imgCol {
-        height: 40%;
+        height: 30%;
         width: 100%;
     }
     .profileImg {

@@ -17,8 +17,8 @@ const Followers = () => {
         });
     },[username]);
 
-    const followers = Followers?.map((fll) => 
-        <li>
+    const followers = Followers?.map((fll, index) => 
+        <li key={index}>
             <p>{fll.login}</p>
             <img className={styles.profileImg} src={avatarUrl+fll.login} alt={fll.login}></img>
         </li>
