@@ -1,6 +1,4 @@
 import React from 'react';
-//import axios from 'axios';
-//import URL from '../../baseURL';
 import styles from './home.module.css';
 import si from '../../Assets/si.png';
 import {useHistory} from "react-router-dom";
