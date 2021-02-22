@@ -7,23 +7,23 @@ import {useHistory} from "react-router-dom";
 
 const Home = () => {
 
-    const [username, setUsername] = React.useState();
+    const [username, setUsername] = React.useState('');
 
     let history = useHistory();
 
     const GetUserInfo = () => {
-        history.push(`/users/${username}`)
-        
-        
-        /*axios.get(`${URL}users/${username}`)
-        .then(res => {
-            setInfo(res.data);
-        });*/
+        history.push(`/users/${username}`);
     }
 
     const onchange = (event) => {
         setUsername(event.target.value);
     }
+
+    const handleKeyPress = (event) => {
+        if(event.key === 'Enter'){
+            history.push(`/users/${username}`);
+        }
+      }
 
     return (
         <div className={styles.container}>
@@ -37,7 +37,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles.inputContainer}>
-                    <input className={styles.userInput} value={username} onChange={onchange}></input>
+                    <input className={styles.userInput} value={username} onChange={onchange} onKeyPress={handleKeyPress}></input>
                     <button className={styles.button} onClick={GetUserInfo}>Search</button>
                 </div>
             </div>

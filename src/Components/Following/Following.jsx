@@ -17,8 +17,8 @@ const Following = () => {
         });
     },[username]);
 
-    const followings = Following?.map((fll) => 
-        <li>
+    const followings = Following?.map((fll, index) => 
+        <li key={index}>
             <p>{fll.login}</p>
             <img className={styles.profileImg} src={avatarUrl+fll.login} alt={fll.login}></img>
         </li>

@@ -1,0 +1,123 @@
+/* Layout */
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+.reposContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleRow {
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.reposGrid {
+    height: auto;
+    width: 80%;
+    padding: 3rem 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 900px){
+    .reposGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .reposGrid {
+        padding: 2rem 0;
+        width: 100%;
+    }
+}
+
+.listItem {
+    min-width: 300px;
+    min-height: 150px;
+    display: flex;
+    list-style: none;
+    border-radius: 5px;
+    /* border: 1px solid #5b5e61; */
+    margin: 2rem;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    padding: .7rem 1.2rem;
+    transition: all .2s ease-in-out;
+}
+
+.listItem:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 500px){
+    .listItem {
+        margin: .75rem 1.25rem;
+        min-width: 250px;
+    }
+}
+
+/* Typography */
+
+.title {
+    font-size: 4rem;
+    color: #e2e2e2;
+    font-weight: 700;
+}
+
+.repoTitle {
+    font-size: 1.3rem;
+    word-wrap: break-word;
+    /* color: #000000; */
+    font-weight: 800;
+    transition: all .2s ease-in-out;
+}
+
+.repoDesc {
+    font-size: .8rem;
+    opacity: 0.9;
+}
+
+.repoLang {
+    font-size: .8rem;
+    font-weight: 900;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.loading:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
