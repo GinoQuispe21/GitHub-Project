@@ -127,9 +127,10 @@
    }   
    .infoContainer {
     flex-direction: column-reverse;
-    justify-content: center;
+    justify-content:center;
     width: 100%;
     height: 80%;
+
     /* border: 1px solid lime; */
     }
     .inputContainer {
