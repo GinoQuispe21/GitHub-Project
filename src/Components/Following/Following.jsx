@@ -18,16 +18,18 @@ const Following = () => {
     },[username]);
 
     const followings = Following?.map((fll, index) => 
-        <li key={index}>
+        <li className = {styles.si1} key={index}>
             <p>{fll.login}</p>
-            <img className={styles.profileImg} src={avatarUrl+fll.login} alt={fll.login}></img>
+            <a href={`https://github.com/${fll.login}`} target="_blank" rel="noopener noreferrer">
+                <img className={styles.profileImg} src={avatarUrl+fll.login} alt={fll.login}></img>
+            </a>
         </li>
     );
 
     return (
         <div className={styles.container}>
-            <h2>Following {username}</h2>
-            <ul>{followings}</ul>
+            <h2 className = {styles.title}>Following {username}</h2>
+            <ul className = {styles.si}>{followings}</ul>
         </div>
     )
 }
