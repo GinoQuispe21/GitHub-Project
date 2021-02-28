@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './home.module.css';
-import si from '../../Assets/si.png';
+import si from '../../Assets/logo.png';
 import {useHistory} from "react-router-dom";
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
                         <h1 className={styles.title}>Search Username</h1>
                     </div>
                     <div className={styles.imageContainer}>
-                        <img src={si} alt="404 gg u suck" />
+                        <img className = {styles.imageLogo}src={si} alt="404 gg u suck" />
                     </div>
                 </div>
                 <div className={styles.inputContainer}>
