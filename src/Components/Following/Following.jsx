@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react'
-import {useParams} from "react-router-dom";
+import React, {useEffect} from 'react';
+import {Link, useParams} from "react-router-dom";
 import axios from 'axios';
 import URL from '../../baseURL';
 import styles from './following.module.css';
@@ -20,9 +20,9 @@ const Following = () => {
     const followings = Following?.map((fll, index) => 
         <li className = {styles.si1} key={index}>
             <p>{fll.login}</p>
-            <a href={`https://github.com/${fll.login}`} target="_blank" rel="noopener noreferrer">
+            <Link to={`/users/${fll.login}`} target="_blank" rel="noopener noreferrer">
                 <img className={styles.profileImg} src={avatarUrl+fll.login} alt={fll.login}></img>
-            </a>
+            </Link>
         </li>
     );
 
