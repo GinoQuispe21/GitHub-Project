@@ -5,6 +5,7 @@
 }
 
 .Vue {
+    background: #4EBA88;
     color: #2D3E50;
 }
 
@@ -41,8 +42,8 @@
 }
 
 .C\23 {
-    background: rgb(57,0,145);
-    background: linear-gradient(103deg, rgba(57,0,145,1) 0%, rgba(108,54,193,1) 100%);
+    background: rgb(96,34,190);
+    background: linear-gradient(103deg, rgba(96,34,190,1) 0%, rgba(105,49,191,1) 100%);
     color: #f0e6ff;
 }
 
@@ -107,7 +108,7 @@
 
 .R {
     background: #BEC0C3;
-    color: #164b88;
+    color: #0a396e;
 }
 
 .PowerShell, .Shell {
