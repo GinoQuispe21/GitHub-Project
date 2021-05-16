@@ -49,6 +49,8 @@ p {
     list-style: none;
     border-radius: 5px;
     /* border: 1px solid #5b5e61; */
+    background: #24292d;
+    color: #fff;
     margin: 2rem;
     flex-direction: column;
     justify-content: space-around;
